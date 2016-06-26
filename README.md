@@ -20,10 +20,10 @@ This script works as long as the data is in a folder as the current working dire
   - Sitting
   - Standing
   - Walking
-  - Walking-Downstairs
-  - Walking- Upstairs
+  - Walking - Downstairs
+  - Walking - Upstairs
 - Columns 3-81 contain the mean of the feature being measured. More information from the original data set.
-- 
+ 
 Feature Selection 
 =================
 
