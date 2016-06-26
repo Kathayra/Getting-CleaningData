@@ -54,6 +54,7 @@ library(datasets)
     
 ##Step 5: From the data set in step 4, creates a second, independent tidy data set with the average 
     ##  of each variable for each activity and each subject.
-    s <- split(activitydataset, activitydataset$Subject)
-    tidydata <- sapply(s, function (x){colMeans(x[,c(3:81)])})
-    table(tidydata)
+    activitydataset <- activitydataset[,2:82]
+    activitydataset_m <- melt(activitydataset, id=c("SubjectID","activity"))
+    tidydata <- dcast(activitydataset_m, SubjectID+activity ~ variable, mean)
+    write.table(tidydata, row.name = FALSE)
